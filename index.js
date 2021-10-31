@@ -6,7 +6,7 @@ const fs = require('fs');
 const Manager = require ('./lib/Manager.js');
 const Engineer = require ('./lib/Engineer.js');
 const Intern = require ('./lib/Intern.js');
-
+require('events').EventEmitter.defaultMaxListeners = 15;
 // Declare arrays for employees
 const managerArray = [];
 const engineerArray = [];
@@ -18,16 +18,17 @@ function init(){
         name: 'userChoice',
         type: 'list',
         message: 'What kind of employee do you want to add?',
-        choices: ['Manager', 'Engineer', 'Intern', 'exitProgram'],
+        choices: ['Manager', 'Engineer', 'Intern', 'Finish building your team!'],
     }).then(function(data){
         if (data.userChoice === 'Manager'){
             createManager()
-        } else if (data.userChoice === 'exitProgram'){
-            createHTML();
         } else if (data.userChoice === 'Engineer'){
             createEngineer();
         } else if (data.userChoice === 'Intern'){
             createIntern();
+        } else if (data.userChoice === 'Finish building your team!'){
+            createHTML();
+            console.log('Your team is built!');
         }
     })
 }
