@@ -6,7 +6,7 @@ const fs = require('fs');
 const Manager = require ('./lib/Manager.js');
 const Engineer = require ('./lib/Engineer.js');
 const Intern = require ('./lib/Intern.js');
-require('events').EventEmitter.defaultMaxListeners = 15;
+
 // Declare arrays for employees
 const managerArray = [];
 const engineerArray = [];
@@ -62,7 +62,7 @@ function createManager() {
         init();
     })
 }
-init ();
+
 
 // Created Engineer function
 function createEngineer() {
@@ -93,7 +93,7 @@ function createEngineer() {
         init();
     })
 }
-init ();
+
 
 // Created Intern function
 function createIntern() {
@@ -124,7 +124,7 @@ function createIntern() {
         init();
     })
 }
-init ();
+
 // Function to create HTML file
 function createHTML(){
     let html = `<!DOCTYPE html>
@@ -180,3 +180,5 @@ fs.writeFile('./dist/index.html', html, (error) => {
 }
 });
 }
+
+createManager();
