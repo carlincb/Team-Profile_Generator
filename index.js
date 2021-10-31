@@ -1,21 +1,18 @@
+// Declared variables to pull in required packages
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+// Declared variables to pull in js files
 const Manager = require ('./lib/Manager.js');
 const Engineer = require ('./lib/Engineer.js');
 const Intern = require ('./lib/Intern.js');
 
+// Declare arrays for employees
 const managerArray = [];
 const engineerArray = [];
 const internArray = [];
 
-// const Colleen = new Manager('Colleen', '3853', 'email@email.com', '1');
-
-// const Brett = new Manager('Brett', '4853', 'email@email.com', '2');
-
-// console.log(Colleen.getId());
-// console.log(Brett.getId());
-
+// Initial function
 function init(){
     inquirer.prompt({
         name: 'userChoice',
@@ -34,27 +31,29 @@ function init(){
         }
     })
 }
+
+// Created Manager function
 function createManager() {
     inquirer.prompt([
         {
             name: 'name', 
             type: 'input',
-            message: 'What is the name of this employee?',
+            message: 'What is the name of the manager?',
         },
         {
             name: 'id',
             type: 'input',
-            message: 'What is the id of this employee?',
+            message: 'What is the id of the manager?',
         },
         {
             name: 'email',
             type: 'input',
-            message: 'What is the email of this employee?',
+            message: 'What is the email of the manager?',
         },
         {
             name: 'officeNumber',
             type: 'input',
-            message: 'What is the office number of this employee?',
+            message: 'What is the office number of the manager?',
         },
     ]).then(function(data){
         const newManager = new Manager(data.name, data.id, data.email, data.officeNumber);
@@ -64,27 +63,28 @@ function createManager() {
 }
 init ();
 
+// Created Engineer function
 function createEngineer() {
     inquirer.prompt([
         {
             name: 'name', 
             type: 'input',
-            message: 'What is the name of this employee?',
+            message: 'What is the name of this engineer?',
         },
         {
             name: 'id',
             type: 'input',
-            message: 'What is the id of this employee?',
+            message: 'What is the id of this engineer?',
         },
         {
             name: 'email',
             type: 'input',
-            message: 'What is the email of this employee?',
+            message: 'What is the email of this engineer?',
         },
         {
             name: 'github',
             type: 'input',
-            message: 'What is the GitHub username of this employee?',
+            message: 'What is the GitHub username of this engineer?',
         },
     ]).then(function(data){
         const newEngineer = new Engineer(data.name, data.id, data.email, data.github);
@@ -94,27 +94,28 @@ function createEngineer() {
 }
 init ();
 
+// Created Intern function
 function createIntern() {
     inquirer.prompt([
         {
             name: 'name', 
             type: 'input',
-            message: 'What is the name of this employee?',
+            message: 'What is the name of this intern?',
         },
         {
             name: 'id',
             type: 'input',
-            message: 'What is the id of this employee?',
+            message: 'What is the id of this intern?',
         },
         {
             name: 'email',
             type: 'input',
-            message: 'What is the email of this employee?',
+            message: 'What is the email of this intern?',
         },
         {
             name: 'school',
             type: 'input',
-            message: 'What is the school of this employee?',
+            message: 'What is the school of this intern?',
         },
     ]).then(function(data){
         const newIntern = new Intern(data.name, data.id, data.email, data.school);
@@ -123,7 +124,7 @@ function createIntern() {
     })
 }
 init ();
-
+// Function to create HTML file
 function createHTML(){
     let html = `<!DOCTYPE html>
     <html lang="en">
@@ -134,7 +135,7 @@ function createHTML(){
         <title>Document</title>
     </head>
     <body>`;
-
+    // Added Manager card
     for (let i = 0; i < managerArray.length; i++) {
         html += `
         <div class="managerCard">
@@ -145,6 +146,7 @@ function createHTML(){
         <p>Office Number: ${managerArray[i].officeNumber}</p>
         </div>`
     }
+    // Added Engineer card
     for (let i = 0; i < engineerArray.length; i++) {
         html += `
         <div class="engineerCard">
@@ -155,6 +157,7 @@ function createHTML(){
         <p>GitHub Username: ${engineerArray[i].github}</p>
         </div>`
     }
+    // Added Intern Card
     for (let i = 0; i < internArray.length; i++) {
         html += `
         <div class="internCard">
@@ -162,7 +165,7 @@ function createHTML(){
         <h2>Name: ${internArray[i].name}</h2>
         <p>Id: ${internArray[i].id}</p>
         <p>Email: ${internArray[i].email}</p>
-        <p>School: ${internArray[i].github}</p>
+        <p>School: ${internArray[i].school}</p>
         </div>`
     }
 
