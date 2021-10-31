@@ -13,6 +13,7 @@ const engineerArray = [];
 const internArray = [];
 
 // Initial function
+
 function init(){
     inquirer.prompt({
         name: 'userChoice',
@@ -33,6 +34,10 @@ function init(){
     })
 }
 
+function welcome() {
+    console.log('Welcome to the Team Profile Generator! To get started, we will begin by asking for details regarding your Manager.');
+    createManager();
+}
 // Created Manager function
 function createManager() {
     inquirer.prompt([
@@ -181,4 +186,4 @@ fs.writeFile('./dist/index.html', html, (error) => {
 });
 }
 
-createManager();
+welcome();
