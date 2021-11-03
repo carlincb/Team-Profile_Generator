@@ -138,13 +138,21 @@ function createHTML(){
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/style.css">
+        <title>My Team</title>
     </head>
-    <body>`;
+    <body>
+    <header>
+        My Team
+    </header>
+    <div class="row justify-content-center">
+    <div class="col-md-4">`;
+
     // Added Manager card
     for (let i = 0; i < managerArray.length; i++) {
         html += `
-        <div class="managerCard">
+        <div class="card managerCard" style="width: 18rem;">
         <h1>Manager</h1>
         <h2>Name: ${managerArray[i].name}</h2>
         <p>Id: ${managerArray[i].id}</p>
@@ -155,7 +163,7 @@ function createHTML(){
     // Added Engineer card
     for (let i = 0; i < engineerArray.length; i++) {
         html += `
-        <div class="engineerCard">
+        <div class="card engineerCard" style="width: 18rem;">
         <h1>Engineer</h1>
         <h2>Name: ${engineerArray[i].name}</h2>
         <p>Id: ${engineerArray[i].id}</p>
@@ -166,7 +174,7 @@ function createHTML(){
     // Added Intern Card
     for (let i = 0; i < internArray.length; i++) {
         html += `
-        <div class="internCard">
+        <div class="card internCard" style="width: 18rem;">
         <h1>Intern</h1>
         <h2>Name: ${internArray[i].name}</h2>
         <p>Id: ${internArray[i].id}</p>
@@ -176,6 +184,8 @@ function createHTML(){
     }
 
 html += `
+</div>
+</div>
 </body>
 </html>`
 
