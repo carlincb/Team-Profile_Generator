@@ -13,8 +13,12 @@ const engineerArray = [];
 const internArray = [];
 
 // Initial function
-
-function init(){
+function init() {
+    console.log('Welcome to the Team Profile Generator! To get started, we will begin by asking you for details regarding your Manager.');
+    createManager();
+}
+// Team builder function
+function teamBuilder(){
     inquirer.prompt({
         name: 'userChoice',
         type: 'list',
@@ -34,10 +38,6 @@ function init(){
     })
 }
 
-function welcome() {
-    console.log('Welcome to the Team Profile Generator! To get started, we will begin by asking for details regarding your Manager.');
-    createManager();
-}
 // Created Manager function
 function createManager() {
     inquirer.prompt([
@@ -64,7 +64,7 @@ function createManager() {
     ]).then(function(data){
         const newManager = new Manager(data.name, data.id, data.email, data.officeNumber);
         managerArray.push(newManager);
-        init();
+        teamBuilder();
     })
 }
 
@@ -95,7 +95,7 @@ function createEngineer() {
     ]).then(function(data){
         const newEngineer = new Engineer(data.name, data.id, data.email, data.github);
         engineerArray.push(newEngineer);
-        init();
+        teamBuilder();
     })
 }
 
@@ -126,7 +126,7 @@ function createIntern() {
     ]).then(function(data){
         const newIntern = new Intern(data.name, data.id, data.email, data.school);
         internArray.push(newIntern);
-        init();
+        teamBuilder();
     })
 }
 
@@ -185,5 +185,5 @@ fs.writeFile('./dist/index.html', html, (error) => {
 }
 });
 }
-
-welcome();
+// Calling initial function
+init();
