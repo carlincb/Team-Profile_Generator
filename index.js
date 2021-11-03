@@ -139,53 +139,91 @@ function createHTML(){
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/ca6e5b2cf1.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./assets/style.css">
         <title>My Team</title>
     </head>
     <body>
-    <header>
+    <main role="main">
+    <section class="jumbotron text-center  bg-danger">
+    <div class="container">
+    <header class="jumbotron-heading text-white">
         My Team
     </header>
-    <div class="row justify-content-center">
-    <div class="col-md-4">`;
+    </div>
+    </section>
+    <div class="container">
+    <div class="row">`;
 
     // Added Manager card
     for (let i = 0; i < managerArray.length; i++) {
         html += `
-        <div class="card managerCard" style="width: 18rem;">
-        <h1>Manager</h1>
-        <h2>Name: ${managerArray[i].name}</h2>
-        <p>Id: ${managerArray[i].id}</p>
-        <p>Email: ${managerArray[i].email}</p>
-        <p>Office Number: ${managerArray[i].officeNumber}</p>
+        <div class="col-md-4">
+        <div class="card mb-4 box-shadow managerCard" style="width: 18rem;">
+        <div class="card body">
+        <div class="bg-primary">
+            <h1 class="card-title text-white bg-primary text-center">${managerArray[i].name}</h1>
+            <h2 class="card-subtitle text-white bg-primary text-center"><span><i class="fas fa-mug-hot"></i></span> Manager</h2>
+        </div>
+        
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Id: ${managerArray[i].id}</li>
+            <li class="list-group-item">Email: <a href = "mailto: ${managerArray[i].email}"> ${managerArray[i].email}</a></li>
+            <li class="list-group-item">Office Number: ${managerArray[i].officeNumber}</li>
+        </ul>
+
+        </div>
+        </div>
         </div>`
     }
     // Added Engineer card
     for (let i = 0; i < engineerArray.length; i++) {
         html += `
-        <div class="card engineerCard" style="width: 18rem;">
-        <h1>Engineer</h1>
-        <h2>Name: ${engineerArray[i].name}</h2>
-        <p>Id: ${engineerArray[i].id}</p>
-        <p>Email: ${engineerArray[i].email}</p>
-        <p>GitHub Username: ${engineerArray[i].github}</p>
+        <div class="col-md-4">
+        <div class="card mb-4 box-shadow engineerCard" style="width: 18rem;">
+        <div class="card-body">
+        <div class="bg-primary">
+            <h1 class="card-title text-white bg-primary text-center">${engineerArray[i].name}</h1>
+            <h2 class="card-subtitle text-white bg-primary text-center"><span><i class="fas fa-glasses"></i></span>Engineer</h2>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Id: ${engineerArray[i].id}</li>
+            <li class="list-group-item">Email: <a href = "mailto: ${engineerArray[i].email}"> ${engineerArray[i].email}</a></li>
+            <li class="list-group-item">GitHub Username: <a href="https://github.com/${engineerArray[i].github}" target="_blank">${engineerArray[i].github}</a></li>
+        </ul>
+
+        </div>
+        </div>
         </div>`
     }
     // Added Intern Card
     for (let i = 0; i < internArray.length; i++) {
         html += `
-        <div class="card internCard" style="width: 18rem;">
-        <h1>Intern</h1>
-        <h2>Name: ${internArray[i].name}</h2>
-        <p>Id: ${internArray[i].id}</p>
-        <p>Email: ${internArray[i].email}</p>
-        <p>School: ${internArray[i].school}</p>
+        <div class="col-md-4">
+        <div class="card mb-4 box-shadow internCard" style="width: 18rem;">
+        <div class="card-body">
+        <div  class="bg-primary">
+            <h1 class="card-title text-white bg-primary text-center">${internArray[i].name}</h1>
+        
+            <h2 class="card-subtitle"><span><i class="fas fa-user-graduate"></i></span>Intern</h2>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Id: ${internArray[i].id}</li>
+            <li class="list-group-item">Email: <a href = "mailto: ${internArray[i].email}"> ${internArray[i].email}</a></li>
+            <li class="list-group-item">School: ${internArray[i].school}</li>
+        </ul>
+
+        </div>
+        </div>
         </div>`
     }
 
 html += `
 </div>
 </div>
+</main>
 </body>
 </html>`
 

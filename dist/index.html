@@ -4,29 +4,76 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/ca6e5b2cf1.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./assets/style.css">
+        <title>My Team</title>
     </head>
     <body>
-        <div class="managerCard">
-        <h1>Manager</h1>
-        <h2>Name: George</h2>
-        <p>Id: 1</p>
-        <p>Email: memail</p>
-        <p>Office Number: 999</p>
+    <main role="main">
+    <section class="jumbotron text-center  bg-danger">
+    <div class="container">
+    <header class="jumbotron-heading text-white">
+        My Team
+    </header>
+    </div>
+    </section>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+        <div class="card mb-4 box-shadow managerCard" style="width: 18rem;">
+        <div class="card body">
+        <div class="bg-primary">
+            <h1 class="card-title text-white bg-primary text-center">Bob</h1>
+            <h2 class="card-subtitle text-white bg-primary text-center"><span><i class="fas fa-mug-hot"></i></span> Manager</h2>
         </div>
-        <div class="engineerCard">
-        <h1>Engineer</h1>
-        <h2>Name: Tom</h2>
-        <p>Id: 2</p>
-        <p>Email: eemail</p>
-        <p>GitHub Username: githubname</p>
+        
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Id: 1</li>
+            <li class="list-group-item">Email: <a href = "mailto: manager@gmail.com"> manager@gmail.com</a></li>
+            <li class="list-group-item">Office Number: 9</li>
+        </ul>
+
         </div>
-        <div class="internCard">
-        <h1>Intern</h1>
-        <h2>Name: Bill</h2>
-        <p>Id: 3</p>
-        <p>Email: iemail</p>
-        <p>School: Coding School</p>
         </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card mb-4 box-shadow engineerCard" style="width: 18rem;">
+        <div class="card-body">
+        <div class="bg-primary">
+            <h1 class="card-title text-white bg-primary text-center">Bill</h1>
+            <h2 class="card-subtitle text-white bg-primary text-center"><span><i class="fas fa-glasses"></i></span>Engineer</h2>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Id: 2</li>
+            <li class="list-group-item">Email: <a href = "mailto: engineer@gmail.com"> engineer@gmail.com</a></li>
+            <li class="list-group-item">GitHub Username: <a href="https://github.com/carlincb" target="_blank">carlincb</a></li>
+        </ul>
+
+        </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card mb-4 box-shadow internCard" style="width: 18rem;">
+        <div class="card-body">
+        <div  class="bg-primary">
+            <h1 class="card-title text-white bg-primary text-center">Joe</h1>
+        
+            <h2 class="card-subtitle"><span><i class="fas fa-user-graduate"></i></span>Intern</h2>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Id: 3</li>
+            <li class="list-group-item">Email: <a href = "mailto: intern@gmail.com"> intern@gmail.com</a></li>
+            <li class="list-group-item">School: ZUniversity</li>
+        </ul>
+
+        </div>
+        </div>
+        </div>
+</div>
+</div>
+</main>
 </body>
 </html>
