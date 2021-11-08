@@ -52,17 +52,25 @@ THEN I exit the application, and the HTML is generated
 
 Here are some guidelines to help you get started:
 
-- Installation can completed by forking and cloning this repository onto your desktop.
+- [Fork the Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
-- Your application should use [Jest](https://www.npmjs.com/package/jest) for running the unit tests and [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. The application will be invoked by using the following command:
-
-```bash
-node index.js
+```
+git clone https://github.com/carlincb/Team-Profile_Generator
 ```
 
 - Create a `.gitignore` file and include `node_modules/` and `.DS_Store/` so that your `node_modules` directory isn't tracked or uploaded to GitHub. Be sure to create your `.gitignore` file before installing any npm dependencies.
 
-- Make sure that your repo includes a `package.json` with the required dependencies. You can create one by running `npm init` when you first set up the project, before installing any dependencies.
+- Your application should use [Jest](https://www.npmjs.com/package/jest) for running the unit tests and [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. These are included as dependencies and should be installed by running the following command in the current working directory for this application:
+
+```
+npm install
+```
+
+- The application will be invoked by using the following command:
+
+```bash
+node index.js
+```
 
 ## Usage
 
@@ -111,11 +119,31 @@ This application can be run using the terminal with Node.js.<br/>Please see belo
 
 ## Contributing
 
-You can contribute to this project by emailing me at: carlin.colleen@gmail.com.
+1. [Fork the Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+
+2. Create a branch:
+
+```
+git checkout -b yourname-branch
+```
+
+3. Commit changes:
+
+```
+git commit -m 'Your changes here'
+```
+
+4. Push to the branch:
+
+```
+git push origin yourname-branch
+```
+
+5. Submit a pull request and wait for it to be approved or denied.
 
 ## Tests
 
-Tests completed using https://jestjs.io/ by using the following command in the terminal of this directory:
+Tests completed using [Jest](https://www.npmjs.com/package/jest) by using the following command in the terminal of Team Profile Generator's directory:
 
 ```bash
 npm run test
