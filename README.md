@@ -52,8 +52,6 @@ THEN I exit the application, and the HTML is generated
 
 Here are some guidelines to help you get started:
 
-- [Fork the Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
-
 ```
 git clone https://github.com/carlincb/Team-Profile_Generator
 ```
@@ -119,27 +117,7 @@ This application can be run using the terminal with Node.js.<br/>Please see belo
 
 ## Contributing
 
-1. [Fork the Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
-
-2. Create a branch:
-
-```
-git checkout -b yourname-branch
-```
-
-3. Commit changes:
-
-```
-git commit -m 'Your changes here'
-```
-
-4. Push to the branch:
-
-```
-git push origin yourname-branch
-```
-
-5. Submit a pull request and wait for it to be approved or denied.
+No contributions needed at this time, but please feel free to contact me at my email address below if you would like to contact me about this project.
 
 ## Tests
 
