@@ -52,8 +52,10 @@ THEN I exit the application, and the HTML is generated
 
 Here are some guidelines to help you get started:
 
+- Git Clone the Repo:
+
 ```
-git clone https://github.com/carlincb/Team-Profile_Generator
+git clone git@github.com:carlincb/Team-Profile_Generator.git
 ```
 
 - Create a `.gitignore` file and include `node_modules/` and `.DS_Store/` so that your `node_modules` directory isn't tracked or uploaded to GitHub. Be sure to create your `.gitignore` file before installing any npm dependencies.
